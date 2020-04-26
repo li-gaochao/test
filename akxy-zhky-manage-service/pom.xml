@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.akxy.zhky</groupId>
+		<artifactId>akxy-zhky-manage</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>akxy-zhky-manage-service</artifactId>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+	<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency> 
+		<dependency>
+			<groupId>com.akxy.zhky</groupId>
+			<artifactId>akxy-zhky-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.akxy.zhky</groupId>
+			<artifactId>akxy-zhky-manage-pojo</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.akxy.zhky</groupId>
+			<artifactId>akxy-zhky-manage-dao</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+	   </dependency>		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+		</dependency> 
+				<dependency>
+  		<groupId>org.quartz-scheduler</groupId>
+  		<artifactId>quartz</artifactId>
+  		<version>2.2.1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-tx</artifactId>
+  		<version>4.0.3.RELEASE</version>
+  	</dependency>
+  	 	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context-support</artifactId>
+  		<version>4.0.3.RELEASE</version>
+  	</dependency>
+  	
+	<dependency>
+        <groupId>com.anke.bubblesort</groupId>  <!--自定义-->
+        <artifactId>bubblesort</artifactId>    <!--自定义-->
+        <version>1.0</version> <!--自定义-->
+        <scope>system</scope> <!--system，类似provided，需要显式提供依赖的jar以后，Maven就不会在Repository中查找它-->
+        <systemPath>${basedir}/lib/bubblesort-api.jar</systemPath> <!--项目根目录下的lib文件夹下-->
+ 	</dependency>
+ 	
+ 	<dependency>
+        <groupId>com.isoline.contour</groupId>  <!--自定义-->
+        <artifactId>contour</artifactId>    <!--自定义-->
+        <version>1.0</version> <!--自定义-->
+        <scope>system</scope> <!--system，类似provided，需要显式提供依赖的jar以后，Maven就不会在Repository中查找它-->
+        <systemPath>${basedir}/lib/contour.jar</systemPath> <!--项目根目录下的lib文件夹下-->
+ 	</dependency>
+	</dependencies>
+	
+	<build>
+	    <plugins>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-war-plugin</artifactId>
+	            <version>2.6</version>
+	            <configuration>
+	                <failOnMissingWebXml>false</failOnMissingWebXml>
+	            </configuration>
+	        </plugin>
+	            <plugin>  
+	            <groupId>org.apache.maven.plugins</groupId>  
+	            <artifactId>maven-compiler-plugin</artifactId>  
+	            <version>3.1</version>  
+	            <configuration>  
+	                <source>1.8</source>  
+	                <target>1.8</target>  
+	            </configuration>  
+	        </plugin>  
+	    </plugins>  
+	</build>
+</project>
